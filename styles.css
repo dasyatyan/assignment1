@@ -1,0 +1,135 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&display=swap" rel="stylesheet">');
+
+/*===Global===*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+/*Navbar*/
+
+ul{
+    list-style: none;
+}
+
+.active{
+    color: rgb(180, 34, 34);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin: 0 30px;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imades/home..jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: rgb(180, 34, 34);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.ctn{
+    padding: 8px 15px;
+    background: rgb(180, 34, 34);
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+/* == Events == */
+
+section{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(87, 87, 115);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Events .row{
+    margin-top: 50px;
+}
+
+.row img{
+    width: 80%;;
+}
+
+h4{
+    font-size: 3vmin;
+    color: rgb(87, 87, 115);
+    margin: 40px auto;
+}
+
+p{
+    color: rgb(106, 106, 112);
+    padding: 0px 40px;
+}
+
+.Events .ctn{
+    margin: 30px;
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
