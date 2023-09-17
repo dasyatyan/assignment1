@@ -17,17 +17,17 @@ ul{
     list-style: none;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    width: 50%;
+    margin-right: 10%;
 }
 
 table, th, td {
     border: 1px solid #ccc;
+    border-collapse: collapse;
 }
 
 th, td {
-    padding: 12px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -45,23 +45,26 @@ tbody tr:hover {
 }
 
 form {
-    max-width: 400px;
-    margin: 0; /* Remove margin to make the form flush with the left */
+    width: 50%;
+    margin-left: auto; 
     background: #fff;
-    padding: 40px;
-    box-shadow: 0 4px 6px #333;
+    padding: 17px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-right: auto; /* Auto margin on the right */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+.table-form {
+    display: flex;
+    align-items: flex-start; 
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #484872;
+    color: #333;
 }
 
 input[type="text"], input[type="email"] {
@@ -88,6 +91,7 @@ button {
 button:hover {
     background-color: #555;
 }
+
 .active{
     color: rgb(180, 34, 34);
     text-decoration: underline;
@@ -118,9 +122,6 @@ body, html{
     padding: 20px;
     color: whitesmoke;
 }
-
-
-
 header{
     width: 100vw;
     height: 100vh;
@@ -248,13 +249,9 @@ p{
 }
 
 .content-col{
-    width:60%;
+    height: 60%;
 }
 
-.image-col{
-    width: 40%;
-    padding: 3%;
-}
 
 .tours .image-gallery{
     display: flex;
@@ -266,20 +263,17 @@ p{
 }
 .image-gallery div {
     width: 200px;
-    padding: 10px;
+    padding: 1px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 .image-gallery img{
-    width: 100%;
+    width: 30%;
     border-radius: 10px;
 }
 .content-col h1{
     font-size: 7vmin;
     color: #484872;
-}
-.content-col .line{
-    margin-left: -1px;
 }
 .content-col p{
     padding: 0;
@@ -364,3 +358,51 @@ li:hover{
     box-shadow: 0 5px 5px rgb(106, 106, 112);
 }
 
+footer {
+    background-color: #333;
+    color: #fff; 
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ccc;
+}
