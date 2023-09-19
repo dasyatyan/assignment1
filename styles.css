@@ -383,21 +383,21 @@ footer {
     color: #fff;
 }
 
-.footer-section ul {
+.footer-section ol {
     list-style: none;
     padding: 0;
 }
 
-.footer-section ul li {
+.footer-section ol li {
     margin-bottom: 10px;
 }
 
-.footer-section ul li a {
+.footer-section ol li a {
     color: #ccc;
     text-decoration: none;
 }
 
-.footer-section ul li a:hover {
+.footer-section ol li a:hover {
     color: #fff;
     text-decoration: underline;
 }
