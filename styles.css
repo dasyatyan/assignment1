@@ -225,7 +225,7 @@ p{
 /* == Tours == */
 
 table {
-    width: 50%;
+    width: 60%;
     margin-right: 10%;
 }
 
@@ -253,7 +253,7 @@ tbody tr:hover {
 }
 
 form {
-    width: 50%;
+    width: 40%;
     margin-left: auto; 
     background: #fff;
     padding: 17px;
