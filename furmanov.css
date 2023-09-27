@@ -1,0 +1,95 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&display=swap" rel="stylesheet">');
+
+.title {
+    background-image: url('imades/136270-2.webp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0; 
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-image: url('imades/136270-2.webp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
+
+  .title-content{
+    color: black;
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 30px;
+  }
+
+  .card-title{
+    text-align: center;
+  }
+
+  .card-text{
+    text-align: center;
+  }
+
+  .awaits h1{
+    text-align: center;
+  }
+
+  .carousel-item {
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carousel-item img {
+    width: 200px;
+    height: 700px;
+    object-fit: cover;
+  }
+
+.row{
+    margin-bottom: 20px;
+}
+
+.begin h1, p{
+    margin-top: 50px;
+    text-align: center;
+}
+
+ol.list-group {
+    margin: 0 auto; 
+    width: 700px; 
+  }
+  
+  ol.list-group-numbered {
+    list-style-type: none; 
+  }
+  
+  .list-group-item {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    margin: 10px 0; 
+  }
+  
+  .list-group-item:first-child {
+    border-top:hwb(from white h w b)
+  }
+  
+  .list-group-item:last-child {
+    border-bottom:hwb(from white h w b); 
+  }
+  
+  .badge {
+    font-size: 20px; 
+    padding: 7px; 
+  }
+  
+  
+  
+  
+  
