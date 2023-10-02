@@ -1,79 +1,5 @@
+
 @import url('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&display=swap" rel="stylesheet">');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-a{
-  text-decoration: none;
-}
-
-.title {
-    background-image: url('imades/136270-2.webp'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0; 
-    width: 100%;
-    height: 100vh;
-    font-family: 'poppins';
-    font-weight: bold;
-    font-size: 24px;
-  }
-  
-  .navbar {
-    background-image: url('imades/136270-2.webp'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.5); 
-    background-color: whitesmoke;
-    
-  }
-
-  .title-content{
-    color: black;
-    text-align: center;
-    margin-top: 300px;
-    margin-bottom: 30px;
-    color: whitesmoke;
-    
-  }
-
-  .card-title{
-    text-align: center;
-  }
-
-  .card-text{
-    text-align: center;
-  }
-
-  .awaits h1{
-    text-align: center;
-  }
-
-  .carousel-item {
-    display: block;
-    margin-left: 50px;
-    margin-right: 50px;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .carousel-item img {
-    width: 200px;
-    height: 700px;
-    object-fit: cover;
-  }
-
-.row{
-    margin-bottom: 20px;
-}
-
-.begin h1, p{
-    margin-top: 50px;
-    text-align: center;
 
 body, html{
     overflow-x: hidden;
@@ -283,27 +209,6 @@ ol.list-group {
   .badge {
     font-size: 20px; 
     padding: 7px; 
-
-  }
-  .form-title{
-    margin-top: 50px;
-    text-align: center;
-  }
-
-  .form{
-    margin-top: 8%;
-    background-image: url('imades/furmanov.jpg');
-  }
-  
-  .form h1{
-    padding: 10rem 0 2rem 0;
-    text-align: center;
-    font-weight: 500;
-    font-size: 40px;
-    color: whitesmoke;
-  }
-  
-
     background-color: rgb(180, 34, 34);
   }
 
@@ -334,29 +239,7 @@ ol.list-group {
    font-size: 30px;
    color: whitesmoke;
   }
-  
-    .reg{
-    width: 78%;
-    margin: auto;
-  }
-  
-    .form-control{
-    width: 500px;
-    height: 50px;
-  }
-  
-    .form-label{
-    color: whitesmoke;
-    font-size: 17px;
-  }
-  
-  .reg{
-  display: flex;
-  justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
+
   .reg{
     width: 78%;
     margin: auto;
@@ -386,10 +269,8 @@ ol.list-group {
     margin-top: 10%;
     margin-bottom: 5%;
   }
-
   
-
-  .form-check-label{
+.form-check-label{
     display: flex;
     justify-content: left;
     align-items: left;
@@ -450,4 +331,3 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   color: #ccc;
 }
-  
