@@ -138,18 +138,31 @@ body, html{
 
 /* Photos */
 
-
-.photos h1{
-  
+.third h1{
   padding: 10rem 0 2rem 0;
   text-align: center;
   font-weight: 500;
   font-size: 40px;
 }
-
-.report{
-  width: 50%;
+.third h4{
+  padding: 10rem 0 2rem 0;
+  text-align: center;
+  color: rgb(149, 148, 148);
 }
+
+.third h6{
+  color: #7b7777;
+  padding: 7rem 0 2rem 0;
+}
+
+.where{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  
+}
+
+
 
 
 
