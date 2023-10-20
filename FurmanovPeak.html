@@ -19,9 +19,11 @@
     <title>Furmanov</title>
     
 
+  </head>
+
   <body>
     <!-- Home Page -->
-    
+    <script src="main.js"></script>
     <section class="title">
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
         <div class="container-fluid">
@@ -76,9 +78,8 @@
           <p>One-day hike to Furmanov Peak at an altitude of 3053 m</p>
           <div class="line"></div>
           <h1 class="title-content-header">Hike to Furmanov Peak</h1>
-          <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="successfuly">
-            Sign up
-           </button>
+          <a href="javascript:void(0);" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="successfuly" onclick="scrollToForm()">Sign up</a>
+
         </div>
       </header>
     </section>
@@ -329,27 +330,27 @@
 
 <!-- Registration -->
 
-<section class="form" style="color: aqua;">
+<section class="form" style="color: rgb(132, 3, 3);" id="registration-form">
   <div class="container">
     <h1>Sign up for the hike now!</h1>
     <p>Check the date of the next trip on the calendar</p>
   </div>
   <div class="container reg">
-    <form enctype="multipart/form-data">
+    <form name="myForm" id="signup-form" onsubmit="return validateForm()" method="post" novalidate>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Your Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name" name="fname" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputPhone1" class="form-label">Phone number</label>
-        <input type="phone" class="form-control" id="exampleInputPhone1" placeholder="+7-999-999-999">
+        <input type="text" class="form-control" id="exampleInputPhone1" placeholder="8-777-777-7777" name="phoneNumber" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputPhoto" class="form-label">Upload Photo</label>
-        <input type="file" class="form-control" id="exampleInputPhoto" accept="image/*">
+        <input type="file" class="form-control" id="exampleInputPhoto" accept="image/*" name="photoreq" required>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
         <label class="form-check-label" for="exampleCheck1">I agree with the terms of this site</label>
       </div>
       <button type="submit" class="btn sub btn-primary">Submit</button>
@@ -357,6 +358,8 @@
     </form>
   </div>
 </section>
+
+
 
     
     <footer>
