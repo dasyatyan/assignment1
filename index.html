@@ -19,6 +19,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="planning.js"></script>
+
     <!-- ==CSS== -->
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -100,65 +102,38 @@
           curiosity be your guide as you traverse the globe's diverse and
           enchanting destinations."
         </p>
-        <a href="#" class="ctn">Learn More</a>
-      </div>
-      <div class="questions">
-        <div class="dropdown">
-          <button class="dropbtn">
-            What level of training is required to participate in the hike?
-          </button>
-          <div class="dropdown-content">
-            <p>
-              Our hikes involve walking, requiring no prior skills. You&apos;ll
-              learn camping essentials like tent setup, fire-making, and
-              storytelling along the way. No special equipment is needed; we
-              follow mountain trails. While it may initially feel challenging,
-              you&apos;ll adapt quickly to the camping lifestyle and discover
-              newfound strength within a day.
-            </p>
+        <a
+          href="#"
+          class="ctn"
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+          >Planning</a
+        >
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">
+              Create your wishlist and track your progress!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            What about physical fitness? Can I handle it?
-          </button>
-          <div class="dropdown-content">
-            <p>
-              You&apos;re capable! We closely monitor hikers&apos; conditions,
-              adjust the pace to their abilities, and maintain a flexible hiking
-              plan. While you&apos;ll need to exert effort and sweat, if
-              you&apos;re prepared and have no medical issues, you&apos;re
-              welcome to join us in the mountains!
-            </p>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Already know the composition of the group? Who will be there?
-          </button>
-          <div class="dropdown-content">
-            <p>
-              Common participants in such trips are city dwellers seeking a
-              nature escape but lacking experience or companions. Typically,
-              they work in offices, use the Internet, reside in urban areas,
-              appreciate nature, and are generally well-intentioned. Hiking
-              tends to attract individuals with positive interests.
-            </p>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            At what age can children participate in hikes?
-          </button>
-          <div class="dropdown-content">
-            <p>
-              For one-day summer trips, children as young as 7 years old can
-              safely participate, depending on their behavior and health.
-              Children often adapt well to camping conditions with a good
-              example to follow. Starting with shorter hikes near your city is a
-              good way to gauge their interest before embarking on longer
-              journeys.
-            </p>
+          <div class="offcanvas-body">
+            <input type="text" id="taskInput" placeholder="Enter the name of the trip" />
+            <button onclick="addTask()" style="margin-top: 8px;">Add Hike</button>
+            <ul id="taskList" style="margin-top: 20px;"></ul>
+
           </div>
         </div>
       </div>
