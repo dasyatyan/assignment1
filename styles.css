@@ -284,6 +284,7 @@ form {
 .table-form {
     display: flex;
     align-items: flex-start; 
+    margin-top: 20px;
 }
 
 label {
@@ -393,6 +394,36 @@ li:hover{
     cursor: pointer;
     box-shadow: 0 5px 5px rgb(106, 106, 112);
 }
+/* ==Timer == */
+   
+  .countdown {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+  }
+   
+  .countdown-number {
+    padding: 10px;
+    border-radius: 3px;
+    background: rgb(180, 34, 34);
+    display: inline-block;
+  }
+   
+  .countdown-time {
+    padding: 15px;
+    border-radius: 3px;
+    background:rgb(180, 34, 34);
+    display: inline-block;
+  }
+   
+  .countdown-text {
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+  }
 
 /* ==Fotter == */
 
@@ -444,5 +475,3 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     color: #ccc;
 }
-
-
