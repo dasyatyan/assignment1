@@ -302,17 +302,14 @@ input[type="text"], input[type="email"] {
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background-color: rgb(180, 34, 34);
+    padding: 5px 10px; 
+    border-radius: 3px;
+    background: rgb(180, 34, 34);
     color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
+    font-size: 14px; 
+    border: none;
     cursor: pointer;
-}
+  }
 
 button:hover {
     background-color: #555;
@@ -424,6 +421,33 @@ li:hover{
     padding-top: 5px;
     font-size: 16px;
   }
+
+  input[type="datetime-local"] {
+    padding: 10px;
+    border-radius: 3px;
+    background: rgb(180, 34, 34);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    margin: 5px;
+  }
+  
+  /* Стили для button */
+  button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: rgb(180, 34, 34);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Добавим немного отступов для button */
+  button + input[type="datetime-local"] {
+    margin-left: 10px;
+  }
+  
 
 /* ==Fotter == */
 
