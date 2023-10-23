@@ -24,7 +24,7 @@
     <!-- ==CSS== -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="myMove()">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
     <script src="scripts.js"></script>
     <!--navbar-->
     <nav class="navbar">
@@ -52,7 +52,9 @@
     <section class="Events">
       <div class="title">
         <h1>Our Sensational Trekkings</h1>
-        <div class="line"></div>
+        <div class="container">
+          <div class="line" id="animate"></div>
+        </div>
       </div>
       <div class="row">
         <div class="col-4">
@@ -131,10 +133,15 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <input type="text" id="taskInput" placeholder="Enter the name of the trip" />
-            <button onclick="addTask()" style="margin-top: 8px;">Add Hike</button>
-            <ul id="taskList" style="margin-top: 20px;"></ul>
-
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Enter the name of the trip"
+            />
+            <button onclick="addTask()" style="margin-top: 8px">
+              Add Hike
+            </button>
+            <ul id="taskList" style="margin-top: 20px"></ul>
           </div>
         </div>
       </div>

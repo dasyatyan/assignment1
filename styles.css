@@ -73,6 +73,9 @@ header{
     margin: 10px auto;
     border-radius: 5px;
 }
+#animate {
+    position: absolute;
+} 
 .header-content h1{
     font-size: 7vmin;
     margin-top: 50px;
@@ -441,3 +444,5 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     color: #ccc;
 }
+
+

@@ -139,8 +139,77 @@ body, html{
 
 /* Photos */
 
-.third h1{
-  padding: 10rem 0 2rem 0;
+
+.acc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.accordion{
+  max-width: 33rem;
+  width: 100%;
+  background: #FFF;
+  margin:0 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin-right: auto;
+  }
+
+  .accordion .accordion-content{
+  margin:10px 0;
+  border-radius: 5px;
+  background-color: #b59a99;
+  border-color: #bbffaa;
+  overflow: hidden;
+  }
+  
+  .accordion-content.is-open{
+  padding-bottom: 10px;
+  }
+  .accordion-content header{
+  display:flex;
+  min-height: 50px;
+  padding: 0 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition:all 0.2s linear;
+  }
+  .accordion-content.is-open header{
+  min-height: 35px;
+  }
+  .accordion-content-title{
+  font-size: 1rem;
+  font-weight: 600;
+  color:rgb(0, 0, 0);
+  }
+  .accordion-content-description {
+    height: 0;
+    overflow: hidden;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: height 0.2s ease; /* Добавьте переход для анимации высоты */
+  }
+  
+  .accordion-icon {
+      font-size: 1.5rem;
+      margin-left: 10px;
+  }
+  .accordion-content.is-open .accordion-icon {
+      transform: rotate(45deg);
+  }
+  
+
+
+  
+
+.third{
+  padding: 20px 5px 60px 5px;
   text-align: center;
   font-weight: 500;
   font-size: 40px;
