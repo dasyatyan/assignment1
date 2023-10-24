@@ -152,11 +152,18 @@ body, html{
 
 /* Photos */
 
+
+
 .acc{
   display: flex;
   align-items: center;
   justify-content: center;
   
+}
+
+.fb {
+  display: flex;
+  justify-content: center;
 }
 
 .accordion{
@@ -221,7 +228,7 @@ body, html{
   
 
 .third{
-  padding: 20px 5px 60px 5px;
+  padding: 20px 5px 10px 5px;
   text-align: center;
   font-weight: 500;
   font-size: 40px;

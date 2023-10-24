@@ -21,6 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+  
+// Function to handle feedback
+function FeedB() {
+  // Prompt the user for feedback
+  const feedbackText = prompt("If you have already gone on a hike with us, leave feedback on how it went^^");
+  
+  // Check if the user provided feedback (not canceled)
+  if (feedbackText !== null) {
+    // Show a thank you message with the user's feedback
+    alert("Thank you! Your feedback is very important to us: " + feedbackText);
+  }
+}
+
 
 // Function to validate a form
 function validateForm() {

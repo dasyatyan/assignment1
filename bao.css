@@ -147,6 +147,11 @@ body, html{
   
 }
 
+.fb {
+  display: flex;
+  justify-content: center;
+}
+
 .accordion{
   max-width: 33rem;
   width: 100%;
@@ -209,7 +214,7 @@ body, html{
   
 
 .third{
-  padding: 20px 5px 60px 5px;
+  padding: 20px 5px 10px 5px;
   text-align: center;
   font-weight: 500;
   font-size: 40px;
