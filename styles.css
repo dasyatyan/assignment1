@@ -20,6 +20,13 @@ a{
   font-weight: 800;
 }
 
+.gamebut {
+    color: white
+}
+.gamebut:hover {
+    color:rgb(180, 34, 34)
+}
+
 ul{
     list-style: none;
 }

@@ -31,6 +31,11 @@ body, html{
   text-decoration: underline;
 }
 
+.gamebut {
+  color: white;
+  text-decoration: none;
+}
+
 
 .navbar {
   background-image: url('https://i0.wp.com/www.gorgeousunknown.com/wp-content/uploads/2022/08/kolsay-and-kaindy-lakes-lower-lake3-scaled.jpg'); 
