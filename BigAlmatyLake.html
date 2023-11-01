@@ -18,7 +18,7 @@
     ></script>
     <title>Big Almaty</title>
     <link rel="stylesheet" href="bigLake.css" />
-
+    <script src="scroll.js"></script>
   <body>
     <!-- Home Page -->
     <script src="main.js"></script>
@@ -40,7 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-link ms-auto">
               <li class="nav-item">
-                <a class="nav-link home" aria-current="page" href="#">Home</a>
+                <a class="nav-link home" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -53,14 +53,12 @@
                   Tours
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Big Almaty Lake</a></li>
-                  <li><a class="dropdown-item" href="#">Kolsay Lakes</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">More</a></li>
+                  <li><a class="dropdown-item" href="FurmanovPeak.html">Furmanov Peak</a></li>
+                  <li><a class="dropdown-item" href="Kolsay.html">Kolsay Lakes</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Explore</a>
+                <a class="nav-link" href="#" onclick="scrollToContainer('explore')">Explore</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -81,12 +79,9 @@
       </header>
     </section>
 
-
-
-
+    
 
     <!-- == Awaits == -->
-
 
 
 
@@ -199,7 +194,7 @@
 
     <!-- == Photos == -->
 
-    <section class="photos">
+    <section id="explore" class="photos">
       <h1 class="third">Explore the world together: Our unforgettable adventures!</h1>
       <div class="row third">
         <div class="col-md-3 acc">
