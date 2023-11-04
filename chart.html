@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bao.css" />
+    <link rel="icon" type="image/x-icon" href="imades/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Tour Booking Statistics</title>
+    <link rel="stylesheet" href="chart.css" />
+    <script src="scroll.js"></script>
+    </head>
+  <body>
+    <!-- Home Page -->
+    <script src="main.js"></script>
+    <section class="title">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="index.html">ADVENTURE</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-link ms-auto">
+              <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Tours
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="FurmanovPeak.html">Furmanov Peak</a></li>
+                  <li><a class="dropdown-item" href="Kolsay.html">Kolsay Lakes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="scrollToContainer('explore')">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <button type="button" class="btn btn-danger">Exit</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="chart">
+        <div class="container">
+            <h1>Tour Booking Statistics</h1>
+            <canvas id="tourPieChart"></canvas>
+        </div>
+        <script src="chart.js"></script>
+    </div>
+    
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            Explore the world with Adventure! 
+            We curate personalized trips, ensuring you uncover the best of every destination. 
+            Let us turn your travel dreams into unforgettable adventures.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: AdventureCompany@gmail.com</p>
+          <p>Phone: +7(727)3314546</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Adventure</p>
+      </div>
+    </footer>
+  </body>
+</html>
