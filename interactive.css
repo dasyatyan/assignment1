@@ -7,6 +7,15 @@ body, html{
 
 /* Navigation Bar */
 
+.gamebut {
+  color: white;
+  text-decoration: none;
+}
+
+.gamebut:hover {
+  color:rgb(180, 34, 34)
+}
+
 .navbar-brand{
   font-family: 'Poppins'; 
   color: whitesmoke; 
