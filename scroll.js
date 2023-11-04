@@ -14,3 +14,9 @@ function scrollToContainer(containerId) {
       behavior: "smooth"
     });
   }
+
+  document.getElementById('passShow').addEventListener('click', function() {
+    var passwordInput = document.getElementById('passwordInput');
+    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+  });
+  

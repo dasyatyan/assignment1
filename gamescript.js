@@ -64,6 +64,9 @@ function displayFlag() {
 function checkAnswer(button) {
     if (button.textContent === shuffledFlags[currentFlagIndex].country) {
         score++;
+        document.getElementById('correctSound').play(); // Воспроизвести звук при правильном ответе
+    } else {
+        document.getElementById('incorrectSound').play(); // Воспроизвести звук при неправильном ответе
     }
     currentFlagIndex++;
     scoreDisplay.textContent = score;
@@ -78,11 +81,14 @@ function endGame() {
     modal.style.display = 'block';
 
     if (score === shuffledFlags.length) {
+        document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры с победой
         modalText.textContent = 'Congratulations! You got all flags!';
     } else {
+        document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры без победы
         modalText.textContent = 'Game over! Your score: ' + score;
     }
 }
+
 
 function restartGame() {
     currentFlagIndex = 0;

@@ -358,6 +358,11 @@ ol.list-group {
     color: whitesmoke;
   }
   
+  #code{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
   
 
 
