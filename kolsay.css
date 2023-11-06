@@ -144,6 +144,47 @@ body, html{
 
 /* Photos */
 
+/* Style the "Feedback" button */
+.fb .btn.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline for anchor tags */
+}
+
+.fb .btn.btn-danger:hover {
+  background-color: #d32f2f; /* Change the background color on hover */
+}
+
+/* Style the tooltip */
+.fb a[data-bs-toggle="tooltip"] {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block; 
+}
+
+.fb a[data-bs-toggle="tooltip"]::before {
+  content: attr(title);
+  position: absolute;
+  top: 30px;
+  bottom: -30px; /* Adjust the tooltip's distance from the button */
+  left: 100%;
+  transform: translateX(-80%);
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.fb a[data-bs-toggle="tooltip"]:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
 
 .acc{
   display: flex;

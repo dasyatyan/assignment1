@@ -380,12 +380,11 @@
           <a
             id="FB"
             class="btn btn-danger"
-            data-toggle="tooltip"
+            data-bs-toggle="tooltip" 
             data-placement="bottom"
-            title="successfuly"
+            title="Help us improve"
             onclick="FeedB()"
-            >Feedback</a
-          >
+          >Feedback</a>
         </div>
       </div>
     </section>
@@ -458,23 +457,20 @@
     <p>Check the date of the next trip on the calendar</p>
   </div>
   <div class="container reg">
-    <form name="myForm" id="signup-form" onsubmit="return validateForm()" method="post" novalidate>
+    <form name="myForm" id="signup-form" onsubmit="return validateForm()" method="post" onfocus="functionForFocus(this)"  novalidate>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Your Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name" name="fname" required>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name" name="fname" required onfocus="functionForFocus(this)">
       </div>
       <div class="mb-3">
         <label for="exampleInputPhone1" class="form-label">Phone number</label>
-        <input type="text" class="form-control" id="exampleInputPhone1" placeholder="8-777-777-7777" name="phoneNumber" required>
+        <input type="text" class="form-control" id="exampleInputPhone1" placeholder="8-777-777-7777" name="phoneNumber" required onfocus="functionForFocus(this)">
       </div>
       <div class="mb-3">
         <label for="exampleInputPhoto" class="form-label">Upload Photo</label>
-        <input type="file" class="form-control" id="exampleInputPhoto" accept="image/*" name="photoreq" required>
+        <input type="file" class="form-control" id="exampleInputPhoto" accept="image/*" name="photoreq" required onfocus="functionForFocus(this)">
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-        <label class="form-check-label" for="exampleCheck1">I agree with the terms of this site</label>
-      </div>
+      
       <button type="submit" class="btn sub btn-primary">Submit</button>
       <div class="form-text">Reservation of a place is carried out only after payment.</div>
     </form>
@@ -513,3 +509,42 @@
     </footer>
   </body>
 </html>
+
+<script>
+
+  // Function to handle feedback
+  function FeedB() {
+          // Prompt the user for feedback
+          const feedbackText = prompt("If you have already gone on a hike with us, leave feedback on how it went^^");
+          
+          // Check if the user provided feedback (not canceled)
+          if (feedbackText !== null) {
+            // Show a thank you message with the user's feedback
+            alert("Thank you! Your feedback is very important to us: " + feedbackText);
+          }
+        }
+      
+        // Get the "Feedback" button element
+        const feedbackButton = document.getElementById("FB");
+      
+        // Function to handle mouseover event
+        function handleMouseOver() {
+          feedbackButton.setAttribute("data-original-title", feedbackButton.getAttribute("title"));
+          feedbackButton.setAttribute("title", "");
+      
+          // Show tooltip
+          new bootstrap.Tooltip(feedbackButton); // Use Bootstrap 5's tooltip method
+        }
+      
+        // Function to handle mouseout event
+        function handleMouseOut() {
+          // Hide tooltip
+          new bootstrap.Tooltip(feedbackButton).hide(); // Use Bootstrap 5's tooltip method
+      
+          feedbackButton.setAttribute("title", feedbackButton.getAttribute("data-original-title"));
+        }
+      
+        // Add event listeners for mouseover and mouseout
+        feedbackButton.addEventListener("mouseover", handleMouseOver);
+        feedbackButton.addEventListener("mouseout", handleMouseOut);
+</script>
