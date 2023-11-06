@@ -26,8 +26,7 @@
     <!-- ==CSS== -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body onload="myMove()">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-    <script src="scripts.js"></script>
+  <body onload="myMove()">
     <!--navbar-->
     <nav class="navbar">
       <h1 class="logo">ADVENTURE</h1>
@@ -44,13 +43,25 @@
             Tours
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="BigAlmatyLake.html">Big Almaty Lake</a></li>
-            <li><a class="dropdown-item" href="FurmanovPeak.html">Furmanov Peak</a></li>
-            <li><a class="dropdown-item" href="Kolsay.html">Kolsay Lakes</a></li>
+            <li>
+              <a class="dropdown-item" href="BigAlmatyLake.html"
+                >Big Almaty Lake</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="FurmanovPeak.html"
+                >Furmanov Peak</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="Kolsay.html">Kolsay Lakes</a>
+            </li>
           </ul>
         </li>
-        <a class="nav-link" href="#" onclick="scrollToContainer('explore')">Explore</a>
-        <li><a href="question.html" style="color: aliceblue;">About</a></li>
+        <a class="nav-link" href="#" onclick="scrollToContainer('explore')"
+          >Explore</a
+        >
+        <li><a href="question.html" style="color: aliceblue">About</a></li>
         <li class="ctn"><a href="interactive.html" class="gamebut">Game</a></li>
       </ul>
     </nav>
@@ -58,8 +69,25 @@
     <header>
       <div class="header-content">
         <h2>Explore The Colorful World</h2>
+
         <div class="line"></div>
-        <h1>A WONDERFULL GIFT</h1>
+        <h1 id="pul">A WONDERFULL GIFT</h1>
+        <script>
+          const text = document.getElementById("pul");
+          let scale = 1;
+
+          function pulseText() {
+            // Увеличиваем или уменьшаем размер текста
+            if (scale === 1) {
+              scale = 1.1;
+            } else {
+              scale = 1;
+            }
+            text.style.transform = `scale(${scale})`;
+          }
+
+          setInterval(pulseText, 500);
+        </script>
         <a href="chart.html" class="ctn">Learn More</a>
       </div>
     </header>
@@ -195,7 +223,7 @@
             </div>
           </div>
           <h3>Set the Countdown Time:</h3>
-          <input type="datetime-local" id="countdown-date-time">
+          <input type="datetime-local" id="countdown-date-time" />
           <button onclick="setCountdownTime()">Set Countdown</button>
           <script src="timer.js"></script>
           <div class="table-form">
@@ -254,6 +282,13 @@
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "g") {
+          window.location.href = "interactive.html";
+        }
+      });
+    </script>
     <footer>
       <div class="footer-content">
         <div class="footer-section about">

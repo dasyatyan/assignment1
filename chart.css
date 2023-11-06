@@ -99,14 +99,15 @@ body, html{
 
 /* ==Chart== */
 
+  
 
-.chart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .chart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-}
+  }
 .chart .container {
     max-width: 35%;
     margin-bottom: 5%;

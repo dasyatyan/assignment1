@@ -112,3 +112,9 @@ document.getElementById('play-again-button').addEventListener('click', function(
 });
 
 startGame();
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "e") {
+      window.location.href = "interactive.html";
+    }
+  });

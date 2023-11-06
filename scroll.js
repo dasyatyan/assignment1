@@ -20,3 +20,9 @@ function scrollToContainer(containerId) {
     passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
   });
   
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "g") {
+      window.location.href = "interactive.html";
+    }
+  });
+ 
