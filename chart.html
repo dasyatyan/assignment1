@@ -16,9 +16,11 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <title>Game</title>
-    <link rel="stylesheet" href="interactive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Tour Booking Statistics</title>
+    <link rel="stylesheet" href="chart.css" />
     <script src="scroll.js"></script>
+    </head>
   <body>
     <!-- Home Page -->
     <script src="main.js"></script>
@@ -69,37 +71,14 @@
         </div>
       </nav>
 
-      <div class="game">
-        <audio id="correctSound" src="sounds/short-success-sound-glockenspiel-treasure-video-game-6346.mp3"></audio>
-        <audio id="incorrectSound" src="sounds/error-126627.mp3"></audio>
-        <audio id="gameOverSound" src="sounds/success-fanfare-trumpets-6185.mp3"></audio>
 
+      <div class="chart">
         <div class="container">
-          <h1 style="font-size: 40px;">Guess the Flag</h1>
-          <div id="flag-container">
-            <img id="flag" src="" alt="Flag" />
-          </div>
-          <div id="options">
-            <button class="option" onclick="checkAnswer(this)"></button>
-            <button class="option" onclick="checkAnswer(this)"></button>
-            <button class="option" onclick="checkAnswer(this)"></button>
-          </div>
-          <p>Score: <span id="score">0</span></p>
-          <button id="restart-button" onclick="restartGame()">Restart</button>
-          <div id="game-over-modal" class="modal">
-            <div class="modal-content">
-              <img src="flags/cup.png" alt="Cup" id="cup-image" />
-              <p id="modal-text">Congratulations!</p>
-              <button id="play-again-button" onclick="restartGame">
-                Play Again
-              </button>
-            </div>
-          </div>
+            <h1>Tour Booking Statistics</h1>
+            <canvas id="tourPieChart"></canvas>
         </div>
-        <script src="gamescript.js"></script>
-      </div>
-
-
+        <script src="chart.js"></script>
+    </div>
     
     <footer>
       <div class="footer-content">

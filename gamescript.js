@@ -64,6 +64,9 @@ function displayFlag() {
 function checkAnswer(button) {
     if (button.textContent === shuffledFlags[currentFlagIndex].country) {
         score++;
+        document.getElementById('correctSound').play(); // Воспроизвести звук при правильном ответе
+    } else {
+        document.getElementById('incorrectSound').play(); // Воспроизвести звук при неправильном ответе
     }
     currentFlagIndex++;
     scoreDisplay.textContent = score;
@@ -78,11 +81,14 @@ function endGame() {
     modal.style.display = 'block';
 
     if (score === shuffledFlags.length) {
-        modalText.textContent = 'Congratulations! You got all flags!';
+        document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры с победой
+        modalText.textContent = 'Congratulations! You have all the flags! Here is your promo code: PLS100percent';
     } else {
-        modalText.textContent = 'Game over! Your score: ' + score;
+        document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры без победы
+        modalText.textContent = 'Game over! Your score: ' + score + '.  Here is your promo code: PLS100percent';
     }
 }
+
 
 function restartGame() {
     currentFlagIndex = 0;

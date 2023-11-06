@@ -479,7 +479,19 @@
           <div class="form-text">Reservation of a place is carried out only after payment.</div>
         </form>
       </div>
+      <div id="code">
+        <input type="password" id="passwordInput" placeholder="Promocode">
+        <button id="passShow">Show</button>
+      </div>
     </section>
+
+    <script>
+
+      document.getElementById('passShow').addEventListener('click', function() {
+    var passwordInput = document.getElementById('passwordInput');
+    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+  });
+  </script>
 
     <footer>
       <div class="footer-content">

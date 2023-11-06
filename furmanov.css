@@ -263,6 +263,8 @@ body, html{
 
 /* Plane of Hike */
 
+
+
 .begin h1{
   margin-top: 5%;
   text-align: center;
@@ -369,6 +371,12 @@ ol.list-group {
     align-items: left;
     text-align: left;
     color: whitesmoke;
+  }
+
+  #code{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
   }
 
   /* ==Fotter == */
