@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
   
-// Function to handle feedback
 function FeedB() {
   // Prompt the user for feedback
   const feedbackText = prompt("If you have already gone on a hike with us, leave feedback on how it went^^");
@@ -33,6 +32,31 @@ function FeedB() {
     alert("Thank you! Your feedback is very important to us: " + feedbackText);
   }
 }
+
+// Get the "Feedback" button element
+const feedbackButton = document.getElementById("FB");
+
+// Function to handle mouseover event
+function handleMouseOver() {
+  feedbackButton.setAttribute("data-original-title", feedbackButton.getAttribute("title"));
+  feedbackButton.setAttribute("title", "");
+
+  // Show tooltip
+  $(feedbackButton).tooltip();
+  $(feedbackButton).tooltip("show");
+}
+
+// Function to handle mouseout event
+function handleMouseOut() {
+  // Hide tooltip
+  $(feedbackButton).tooltip("hide");
+
+  feedbackButton.setAttribute("title", feedbackButton.getAttribute("data-original-title"));
+}
+
+// Add event listeners for mouseover and mouseout
+feedbackButton.addEventListener("mouseover", handleMouseOver);
+feedbackButton.addEventListener("mouseout", handleMouseOut);
 
 
 // Function to validate a form
@@ -67,3 +91,10 @@ function scrollToForm() {
       form.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly to the form
     }
   }
+
+function functionForFocus(x){
+  x.style.background= "rgb(197, 104, 104)";
+}
+
+
+

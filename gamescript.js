@@ -82,10 +82,10 @@ function endGame() {
 
     if (score === shuffledFlags.length) {
         document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры с победой
-        modalText.textContent = 'Congratulations! You have all the flags! Here is your promo code: PLS100percent';
+        modalText.textContent = 'Congratulations! You have all the flags! Here is your promo code: PLS100Percent';
     } else {
         document.getElementById('gameOverSound').play(); // Воспроизвести звук при завершении игры без победы
-        modalText.textContent = 'Game over! Your score: ' + score + '.  Here is your promo code: PLS100percent';
+        modalText.textContent = 'Game over! Your score: ' + score + '.  Here is your promo code: PLS100Percent';
     }
 }
 
