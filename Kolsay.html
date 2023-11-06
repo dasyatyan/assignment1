@@ -478,16 +478,27 @@
   <div id="code">
     <input type="password" id="passwordInput" placeholder="Promocode">
     <button id="passShow">Show</button>
+    <button id="submitPromo">Submit</button>
   </div>
-</section>
-
+  </section>
+  
   <script>
-
-      document.getElementById('passShow').addEventListener('click', function() {
-    var passwordInput = document.getElementById('passwordInput');
-    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-  });
+    document.getElementById('passShow').addEventListener('click', function() {
+      var passwordInput = document.getElementById('passwordInput');
+      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+    });
+  
+    document.getElementById('submitPromo').addEventListener('click', function() {
+      var promoCode = document.getElementById('passwordInput').value;
+      
+      if (promoCode === 'PLS100Percent') {
+        alert('Successfully');
+      } else {
+        alert('Such promo code does not exist');
+      }
+    });
   </script>
+  
 </section>
 
     
