@@ -251,31 +251,122 @@
                 </tr>
               </tbody>
             </table>
-            <form>
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
+            <form id="regForm" action="/action_page.php">
+              <h1>Register:</h1>
+              <!-- One "tab" for each step in the form: -->
+              <div class="tab">Name:
+                <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+                <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
               </div>
-
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                />
+              <div class="tab">Contact Info:
+                <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+                <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
               </div>
-
-              <button type="submit">Register</button>
+              <div class="tab">Birthday:
+                <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+                <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+                <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+              </div>
+              <div class="tab">Login Info:
+                <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+                <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+              </div>
+              <div style="overflow:auto;">
+                <div style="float:right;">
+                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+              </div>
+              <!-- Circles which indicates the steps of the form: -->
+              <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
             </form>
+            <script>
+              var currentTab = 0; // Current tab is set to be the first tab (0)
+              showTab(currentTab); // Display the current tab
+              
+              function showTab(n) {
+                // Эта функция будет отображать указанную вкладку формы...
+                var x = document.getElementsByClassName("tab");
+                x[n].style.display = "block";
+                // ... и корректировать кнопки "Previous" и "Next":
+                if (n == 0) {
+                  document.getElementById("prevBtn").style.display = "none";
+                } else {
+                  document.getElementById("prevBtn").style.display = "inline";
+                }
+                if (n == (x.length - 1)) {
+                  document.getElementById("nextBtn").innerHTML = "Submit";
+                } else {
+                  document.getElementById("nextBtn").innerHTML = "Next";
+                }
+                // ... и запустим функцию, которая отобразит правильный индикатор шага:
+                fixStepIndicator(n);
+              }
+              
+              function nextPrev(n) {
+                // Эта функция определит, какую вкладку отобразить
+                var x = document.getElementsByClassName("tab");
+                // Выйдите из функции, если какое-то поле в текущей вкладке недопустимо:
+                if (n == 1 && !validateForm()) return false;
+                // Спрячем текущую вкладку:
+                x[currentTab].style.display = "none";
+                // Увеличим или уменьшим текущую вкладку на 1:
+                currentTab = currentTab + n;
+                // если вы достигли конца формы...
+                if (currentTab >= x.length) {
+                  // ... форма отправляется:
+                  showSuccessMessage();
+                  return false;
+                }
+                // Иначе отобразим правильную вкладку:
+                showTab(currentTab);
+              }
+              
+              function validateForm() {
+                // Эта функция занимается проверкой полей формы
+                var x, y, i, valid = true;
+                x = document.getElementsByClassName("tab");
+                y = x[currentTab].getElementsByTagName("input");
+                // Цикл, который проверяет каждое поле в текущей вкладке:
+                for (i = 0; i < y.length; i++) {
+                  // Если поле пустое...
+                  if (y[i].value == "") {
+                    // добавляем класс "invalid" к полю:
+                    y[i].className += " invalid";
+                    // и устанавливаем текущий статус валидности в false
+                    valid = false;
+                  }
+                }
+                // Если статус валидности true, отметим шаг как завершенный и валидный:
+                if (valid) {
+                  document.getElementsByClassName("step")[currentTab].className += " finish";
+                }
+                return valid; // возвращаем статус валидности
+              }
+              
+              function fixStepIndicator(n) {
+                // Эта функция удаляет класс "active" со всех шагов...
+                var i, x = document.getElementsByClassName("step");
+                for (i = 0; i < x.length; i++) {
+                  x[i].className = x[i].className.replace(" active", "");
+                }
+                //... и добавляет класс "active" на текущем шаге:
+                x[n].className += " active";
+              }
+              
+              function showSuccessMessage() {
+                // Ваш алерт с сообщением о успешной регистрации
+                alert("Registration successful!");
+                // Прокрутим страницу вверх после алерта
+                window.scrollTo(0, 0);
+              }
+              </script>
+  
           </div>
         </div>
       </div>
