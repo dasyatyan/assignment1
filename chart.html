@@ -79,6 +79,32 @@
         </div>
         <script src="chart.js"></script>
     </div>
+    <p style="color: whitesmoke">Search Hike</p>
+
+<form onsubmit="return searchAndRedirect()">
+  <input type="text" name="search" id="searchInput" placeholder="Search..">
+</form>
+
+<script>
+function searchAndRedirect() {
+  // Получаем текст из поля ввода
+  var searchText = document.getElementById("searchInput").value.toLowerCase();
+
+  // Проверяем введенный текст и перенаправляем на соответствующую страницу
+  if (searchText === "kolsay") {
+    window.location.href = "Kolsay.html";
+  } else if (searchText === "furmanov") {
+    window.location.href = "FurmanovPeak.html";
+  } else if (searchText === "bao") {
+    window.location.href = "BigAlmatyLake.html";
+  } else {
+    alert("Hike not found on the page");
+  }
+
+  // Возвращаем false, чтобы предотвратить отправку формы
+  return false;
+}
+</script>
     
     <footer>
       <div class="footer-content">
