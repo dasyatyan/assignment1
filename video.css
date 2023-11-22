@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота вьюпорта */
+  margin: 0; /* Убрать стандартные отступы */
+  font-family: Arial, sans-serif; /* Шрифт для страницы */
+  background-color: #f4f4f4; /* Цвет фона */
   }
   
   .video-container {
@@ -59,8 +61,89 @@ button[type="button"] {
   background-color: #ff8941; 
 }
 
-.button[type="button"] {
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
-  
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #a7c7e0;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #a7c7e0;
+  color: white;
+}
+
+#myBtn {
+  padding: 10px 20px; /* Паддинги для размера кнопки */
+  font-size: 16px; /* Размер шрифта */
+  color: white; /* Цвет текста */
+  background-color: #a7c7e0; /* Фон кнопки */
+  border: none; /* Убрать стандартные границы */
+  border-radius: 5px; /* Скругление углов */
+  cursor: pointer; /* Курсор в виде указателя */
+  transition: background-color 0.3s; /* Плавный переход для фона */
+  align-items: center;
+}
+
+/* Стили для наведения на кнопку */
+#myBtn:hover {
+  background-color: #0056b3; /* Затемнение фона при наведении */
+}
